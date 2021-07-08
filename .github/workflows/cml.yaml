@@ -9,7 +9,7 @@ jobs:
       - name: cml_run
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-        run:|
+        run: |
           echo "Hello"
           echo "Hello again"
           echo "Hello again!!"
