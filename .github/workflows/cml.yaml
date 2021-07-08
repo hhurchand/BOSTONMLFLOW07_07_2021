@@ -1,4 +1,4 @@
-name: model-supervisé RL
+name: Integration Continue
 on: [push]
 jobs:
   run:
@@ -9,4 +9,7 @@ jobs:
       - name: cml_run
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run:|
+          echo "Hello"
+          echo "Hello again"
 
