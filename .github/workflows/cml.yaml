@@ -10,7 +10,7 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "Hello"
-          echo "Hello again"
-          echo "Hello again!!"
+          pip install -r requirements.txt
+          pip install mlflow
+          mlflow ui
 
