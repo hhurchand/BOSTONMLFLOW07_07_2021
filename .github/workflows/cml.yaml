@@ -13,5 +13,5 @@ jobs:
           pip install -r requirements.txt
           pip install mlflow
           mlflow run . -e train.py
-          mlflow ui
+
 
