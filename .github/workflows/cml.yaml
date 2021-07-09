@@ -13,5 +13,14 @@ jobs:
           pip install -r requirements.txt
           pip install mlflow
           mlflow run . -e train.py
+      - uses: shrink/actions-docker-extract@v1
+        with:
+          image: 'docker://hhurchand/bdeb_mlflow_boston:latest'
+          path: '/app/mlruns'
+      - name: Upload Dist
+        uses: actions/upload-artifact@v2
+        with:
+          path: ${{ steps.extract.outputs.destination }}
+          name: dist
 
 
