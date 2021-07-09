@@ -10,8 +10,8 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pip install -r requirements.txt
-          pip install mlflow
+          sudo -H pip install -r requirements.txt
+          sudo -H pip install mlflow
           mlflow run . -e train.py
           mlflow ui
 
