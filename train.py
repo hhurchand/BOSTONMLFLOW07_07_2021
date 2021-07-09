@@ -125,8 +125,8 @@ print("y-intercept",model.coef_[0])
 # In[18]:
 
 ## UNCOMMENT FOR MLFLOW REPORTING
-#mlflow.set_experiment(experiment_name="experiment1")
-#mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_experiment(experiment_name="experiment1")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
 with mlflow.start_run():
     mlflow.log_param("alpha1",model.coef_[0])
     mlflow.log_param("beta1",model.coef_[1])
